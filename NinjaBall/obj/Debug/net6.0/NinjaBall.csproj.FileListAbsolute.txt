@@ -24,3 +24,5 @@ C:\Users\codys\source\repos\NinjaBall\NinjaBall\obj\Debug\net6.0\NinjaBall.pdb
 C:\Users\codys\source\repos\NinjaBall\NinjaBall\obj\Debug\net6.0\NinjaBall.genruntimeconfig.cache
 C:\Users\codys\source\repos\NinjaBall\NinjaBall\obj\Debug\net6.0\ref\NinjaBall.dll
 C:\Users\codys\source\repos\NinjaBall\NinjaBall\bin\Debug\net6.0\Content\sprites\spr_ball_0.xnb
+C:\Users\codys\source\repos\NinjaBall\NinjaBall\bin\Debug\net6.0\Content\font.xnb
+C:\Users\codys\source\repos\NinjaBall\NinjaBall\bin\Debug\net6.0\Content\sprites\player.xnb

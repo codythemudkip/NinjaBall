@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using NinjaBall.Actors;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace NinjaBall
 {
@@ -19,9 +20,6 @@ namespace NinjaBall
         Score score;
         private List<SpriteActor> _sprites;
 
-        // Ball 
-        private Ball spr_ninjaBall;
-
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -31,6 +29,7 @@ namespace NinjaBall
 
         protected override void Initialize()
         {
+            Window.Title = "Ninja Ball 5";
             screenHeight = _graphics.PreferredBackBufferHeight;
             screenWidth = _graphics.PreferredBackBufferWidth;
             random= new Random();
@@ -42,7 +41,30 @@ namespace NinjaBall
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            spr_ninjaBall = new Ball(Content.Load<Texture2D>("sprites/spr_ball_0"), 2, 2, 150);
+            var paddleTexture = Content.Load<Texture2D>("sprites/player");
+            var ballTexture = Content.Load<Texture2D>("sprites/spr_ball_0");
+
+            score = new Score(Content.Load<SpriteFont>("font"));
+
+            _sprites = new List<SpriteActor>()
+            {
+
+
+                new Paddle(paddleTexture)
+                {
+                    position = new Vector2(20, (screenHeight / 2) - (paddleTexture.Height / 2)),
+                    input = new Input()
+                    {
+                        up = Keys.Up,
+                        down= Keys.Down,
+                    }
+                },
+                new Ball(ballTexture)
+                {
+                    position = new Vector2((screenWidth / 2) - (ballTexture.Width / 2), (screenHeight / 2) - (ballTexture.Height / 2)),
+                    score = score
+                }
+            };
         }
 
         protected override void Update(GameTime gameTime)
@@ -50,7 +72,10 @@ namespace NinjaBall
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            foreach (var sprite in _sprites)
+            {
+                sprite.Update(gameTime, _sprites);
+            }
 
             base.Update(gameTime);
         }
@@ -60,7 +85,10 @@ namespace NinjaBall
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin();
-            spr_ninjaBall.Draw(_spriteBatch);
+            foreach (var sprite in _sprites) { sprite.Draw(_spriteBatch); }
+
+            score.Draw(_spriteBatch);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);

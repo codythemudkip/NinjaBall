@@ -1,2 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/font.spritefont","C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2076,21535,0.14875
+"C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/sprites/player.png","C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/Content/sprites/player.xnb","TextureProcessor","Texture2DContent",19457,32853,0.0086281
 "C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/sprites/spr_ball_0.png","C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/Content/sprites/spr_ball_0.xnb","TextureProcessor","Texture2DContent",3524,4181,0.1076998

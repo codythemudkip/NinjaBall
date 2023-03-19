@@ -2,8 +2,8 @@
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/font.spritefont</SourceFile>
   <SourceTime>2023-03-18T18:47:00.8557909-04:00</SourceTime>
-  <DestFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/font.xnb</DestFile>
-  <DestTime>2023-03-18T22:50:16.2420681-04:00</DestTime>
+  <DestFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/Content/font.xnb</DestFile>
+  <DestTime>2023-03-18T23:10:14.6576627-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
