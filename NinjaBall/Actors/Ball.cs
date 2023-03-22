@@ -69,31 +69,37 @@ namespace NinjaBall.Actors
             if (position.X > Game1.screenWidth)
             {
                 score.score++;
-                Restart();
+                RandomDirection();
+                //Restart();
             }
 
             position += velocity * speed;
         }
 
-        public void Restart()
+        public void RandomDirection()
         {
             var direction = Game1.random.Next(0, 4);
 
             switch (direction)
             {
                 case 0:
-                    velocity = new Vector2(1, 1);
+                    velocity = new Vector2(-0.5f, 0.5f);
                     break;
                 case 1:
-                    velocity = new Vector2(1, -1);
+                    velocity = new Vector2(-0.5f, -1);
                     break;
                 case 2:
                     velocity = new Vector2(-1, -1);
                     break;
                 case 3:
-                    velocity = new Vector2(1, 1);
+                    velocity = new Vector2(-1, 0.5f);
                     break;
             }
+        }
+
+        public void Restart()
+        {
+            RandomDirection();
 
             position = (Vector2)_startPosition;
             speed = (float)_startSpeed;

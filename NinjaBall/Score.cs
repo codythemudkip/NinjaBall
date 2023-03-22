@@ -21,7 +21,8 @@ namespace NinjaBall
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(_font, score.ToString(), new Vector2(320, 70), Color.White);
+            var _scoreText = "Score: " + score.ToString();
+            spriteBatch.DrawString(_font, _scoreText, new Vector2(320, 70), Color.Red);
         }
     }
 }

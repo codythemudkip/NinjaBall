@@ -5,10 +5,12 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/font.spritefont</File>
+    <File>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/nionjabg.png</File>
     <File>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/sprites/player.png</File>
     <File>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/sprites/spr_ball_0.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

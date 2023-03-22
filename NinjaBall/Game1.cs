@@ -41,6 +41,7 @@ namespace NinjaBall
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            var background = Content.Load<Texture2D>("nionjabg");
             var paddleTexture = Content.Load<Texture2D>("sprites/player");
             var ballTexture = Content.Load<Texture2D>("sprites/spr_ball_0");
 
@@ -48,7 +49,7 @@ namespace NinjaBall
 
             _sprites = new List<SpriteActor>()
             {
-
+                new SpriteActor(background) {},
 
                 new Paddle(paddleTexture)
                 {

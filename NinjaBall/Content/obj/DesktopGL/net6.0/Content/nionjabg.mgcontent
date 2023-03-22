@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/sprites/player.png</SourceFile>
-  <SourceTime>2023-03-13T18:10:57.7453992-04:00</SourceTime>
-  <DestFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/sprites/player.xnb</DestFile>
-  <DestTime>2023-03-20T23:16:05.0625605-04:00</DestTime>
+  <SourceFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/nionjabg.png</SourceFile>
+  <SourceTime>2023-03-20T23:15:08.5681846-04:00</SourceTime>
+  <DestFile>C:/Users/codys/source/repos/NinjaBall/NinjaBall/Content/bin/DesktopGL/Content/nionjabg.xnb</DestFile>
+  <DestTime>2023-03-20T23:16:08.5063711-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

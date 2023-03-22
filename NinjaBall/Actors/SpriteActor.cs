@@ -16,17 +16,29 @@ namespace NinjaBall.Actors
         public float speed;
         public Input input;
 
+        public Rectangle sourceRect = new Rectangle();
+        public Rectangle destinationRect= new Rectangle();
+
         public Rectangle rectangle
         {
             get
             {
-                return new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+                return new Rectangle((int)position.X, (int)position.Y, destinationRect.Width, destinationRect.Height);
             }
         }
 
         public SpriteActor(Texture2D texture)
         {
             this.texture = texture;
+            sourceRect = new Rectangle(0,0, texture.Width, texture.Height);
+            destinationRect = sourceRect;
+        }
+
+        public SpriteActor(Texture2D texture, Rectangle sourceRectangle, Rectangle destinationRectangle)
+        {
+            this.texture = texture;
+            this.sourceRect = sourceRectangle;
+            this.destinationRect = destinationRectangle;
         }
 
         public SpriteActor(Texture2D texture, float x, float y, float speed) 
@@ -41,9 +53,10 @@ namespace NinjaBall.Actors
             
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, Color.White);
+            spriteBatch.Draw(texture, position, destinationRect, Color.White);
+            //spriteBatch.Draw(texture, destinationRect, sourceRect, Color.White);
         }
 
         public virtual void Update(GameTime gameTime, List<SpriteActor> sprites) { }
